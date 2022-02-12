@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistotapplication.ToimipisteidenHallintaViewController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#menuAddNewClicked" text="Lisää uusi Toimipiste" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuCloseClicked" text="Sulje ikkuna" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuEditClicked" text="Muokkaa toimipisteen tiedot" />
+              <MenuItem mnemonicParsing="false" onAction="#menuDeleteClicked" text="Poista toimipisteen tiedot" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="CENTER" prefHeight="52.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="VuokraToimistot Oy toimipisteet">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblViewToimipiste" prefHeight="385.0" prefWidth="1069.0">
+        <columns>
+          <TableColumn fx:id="toimipisteIDColumn" prefWidth="132.0" text="Toimipiste ID" />
+          <TableColumn fx:id="toimipisteNimiColumn" prefWidth="575.0" text="Toimipiste" />
+            <TableColumn fx:id="toimipisteHintaColumn" minWidth="0.0" prefWidth="160.0" text="Hinta/vuorokausi" />
+            <TableColumn fx:id="toimipisteKokoColumn" prefWidth="200.0" text="Koko/neliöt" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="42.0" prefHeight="31.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="Tietojen hallinta">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtToimipisteID" promptText="Toimipiste ID" style="-fx-border-color: LIGHTBLUE;" />
+      <TextField fx:id="txtToimipisteNimi" layoutX="10.0" layoutY="523.0" promptText="Toimipiste" style="-fx-border-color: LIGHTBLUE;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="txtVuorokausiHinta" layoutX="10.0" layoutY="554.0" promptText="Hinta/vuorokausi" style="-fx-border-color: LIGHTBLUE;">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="txtToimipisteKoko" layoutX="10.0" layoutY="585.0" promptText="Koko/neliöt" style="-fx-border-color: LIGHTBLUE;">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </TextField>
+   </children>
+</VBox>

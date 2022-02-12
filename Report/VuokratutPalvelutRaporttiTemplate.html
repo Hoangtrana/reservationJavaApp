@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VARATUT PALVELUT TOIMIPISTEITTÄIN</title>
+    
+    <style>
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        a {
+            color: #5D6975;
+            text-decoration: underline;
+        }
+
+        body {
+            position: relative;
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0 auto;
+            color: #001028;
+            background: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-family: Arial;
+        }
+
+        header {
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        #logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+            #logo img {
+                width: 90px;
+            }
+
+        h1 {
+            border-top: 1px solid #5D6975;
+            border-bottom: 1px solid #5D6975;
+            color: #5D6975;
+            font-size: 2.4em;
+            line-height: 1.4em;
+            font-weight: normal;
+            text-align: center;
+            margin: 0 0 20px 0;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAyCAYAAADFhCKTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAPgSURBVGhDpZlRktMwEETD3oIPOBD3hQPxAcdYtl0813N7pITiVQmNZrpHsuPdZMOn77++vH/7/PPx4/fXx0RqIfWdrrH2Fd8rmrf846aegXrm1Lo+MW1sb8fPDhreJgOHMlmTQ2cvswf4IN7DsfXQuePONhG50TSjoaE9wbE3dQxTLtx6vA/kOYbErKeZuOn8bj3FmXucz6wHuYnkuRPM1k6xZ+J4vTadY5+3FLw5Y0VqzzaY6t4jdTTs55yx71Nu+bH6IGKMzAHD1CxQB/yO3WsVG/LmuLOMxhsGNyR2jj7JuZ/91DteQS3zeWe9CQJvsmLSkIPuF6ae7O2e9twO+7+4eeiDTofxvu0P6I7HABL3mnnKN8l7413sdeieXQ/nm8LUALq200FiLpKx8u1qzl8+G9hEzlhnsnaNg2ZeHSKgaZxz78uvLoMAOIDpjboeJg29qHXOczhj3soC8wrXd1r3a49zrk1Yl3EelmG87pqZfM+85HYzMdweA2692b40f+MV+By3z5pAPVh/+YhoUUMzbwDEU86bhcTJdT7Yw7iwuv39EnQdnIfWds1raG1rsj4+z7Ygc4uNa63d+eDV3oH+GedjwMvTLxlr502/VPR45jOThtzlceD0jXPEXCG8ogmuAbqd1nE4/6yZisxhlzNT7l9Jjx7hfLu93O6/eO3YL1FDbvfyp0a948b9jsMmYZNxjhh92HmmGvhC6eeZ4R7HNzIJUgAMO6xxQ3CtY/TE3ccaMx42rBpD65vezHp6r+h90B9vt93YWAzoe0Pr3NO59gC17n3x5LD+iVvRddbP8q63dkV7GOefNasrhlXdeXqF5H1XOraWmBlvc34xt2IyQW/YvXa9OVD7dj3PO4vRtNFzmnhDILeitcbrjjPOL5PBh5k2tTZEQ26K3cPe1oad98AP8RR7Bq+n2LProTUrXKfP09+zq7hzgTyxIR/aD+2156CvkHXnd0w9euxw3fr2LX8bcPVcna/ydsUfWOeeib1OffIb9saH/vYO5sYNDTyHyYPGWO86+cb+aM5PXWZlbtoH9hNntr5jj+bslzvbz4afmanmXNdh5W1W/kCN+XZn+w4E350d1k13KLnU3Gfai4Eezr8U4JWGjfWZ6YHPNXDOMR56QOLl97M2BesMdZh8id2XQQ2sC127vd2G3iCwRkvN3p2POEx9TPeA4zEIFGnEmqbBsYm2/QzyYJ1r9O75Qu6sfyJZOxdYtxZavyK6yUfeteD67T9APBuulLpprdlpvV9Y9UF3/j9YG5mhG7G2xyRHPhr0zjedb+34eTZrmq94VQM77Su9Ho/H4w9uJit8+rFkaQAAAABJRU5ErkJggg==);
+        }
+
+        #project {
+            float: left;
+        }
+
+            #project span {
+                color: #5D6975;
+                text-align: right;
+                width: 52px;
+                margin-right: 10px;
+                display: inline-block;
+                font-size: 0.8em;
+            }
+
+        #company {
+            float: right;
+            text-align: right;
+        }
+
+            #project div,
+            #company div {
+                white-space: nowrap;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 20px;
+        }
+
+            table tr:nth-child(2n-1) td {
+                background: #F5F5F5;
+            }
+
+            table th,
+            table td {
+                text-align: center;
+            }
+
+            table th {
+                padding: 5px 20px;
+                color: #5D6975;
+                border-bottom: 1px solid #C1CED9;
+                white-space: nowrap;
+                font-weight: normal;
+            }
+
+            table .service,
+            table .desc {
+                text-align: left;
+            }
+
+            table td {
+                padding: 20px;
+                text-align: right;
+            }
+
+                table td.palvelunID,
+                table td.desc {
+                    vertical-align: top;
+                }
+
+                table td.palvelunNimi,
+                table td.palvelunHinta,
+                table td.palvelunKuvaus,
+                table td.varausID,
+                table td.aloitusPaiva,
+                table td.lopetusPaiva,
+                table td.asiakasID,
+                table td.toimipisteID, {
+                    font-size: 1.2em;
+                }
+
+                table td.grand {
+                    border-top: 1px solid #5D6975;
+                }
+
+        #notices .notice {
+            color: #5D6975;
+            font-size: 1.2em;
+        }
+
+        footer {
+            color: #5D6975;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid #C1CED9;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header class="clearfix">
+        <div id="logo">
+            <img src="data:image/png;base64,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" />
+        </div>
+        <h1>VUOKRATUT PALVELUT</h1>
+        <div id="company" class="clearfix">
+            <div><b>OSOITE</b></div>
+            <div>VuokraToimistot Oy</div>
+            <div>Vuokrakatu 1<br /> 80300, JOENSUU</div>
+            <div>+358 123 456</div>
+            <div><a href="mailto:company@example.com">vuokratoimistotoy@vuokratoimistotoy.fi</a></div>
+            <div><b>FI49 1234 5678 9876 54</b></div>
+        </div>
+        <div id="project">
+            <div><span>Aihe</span>Varatut palvelut toimipisteittäin</div>
+            <div><span>Toimipiste</span>__TOIMIPISTEID__</div>
+	    <div><span>Toimipiste</span>__TOIMIPISTENIMI__</div>
+            <div><span>Aloituspäivä</span>__ALOITUSPAIVA__</div>
+            <div><span>Lopetuspäivä</span>__LOPETUSPAIVA__</div>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="service">PALVELUN ID</th>
+                    <th class="desc">PALVELUN NIMI</th>
+                    <th>HINTA</th>
+                    <th>KUVAUS</th>                   
+                    <th>VARAUS ID</th>
+		    <th>AloitusPVM</th>
+		    <th>LopetusPVM</th>
+		    <th>ASIAKAS ID</th>
+		    <th>TOIMIPISTE ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                __TABLE__
+            </tbody>
+        </table>
+        <div id="notices">
+            <div>RAPORTIN LOPPU</div>
+            <div class="notice"></div>
+        </div>
+    </main>
+    <footer>
+        Yritys R01 Oy
+    </footer>
+</body>
+</html>

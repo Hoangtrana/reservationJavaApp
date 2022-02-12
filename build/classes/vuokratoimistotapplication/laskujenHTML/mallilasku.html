@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lasku</title>
+    
+    <style>
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        a {
+            color: #5D6975;
+            text-decoration: underline;
+        }
+
+        body {
+            position: relative;
+            width: 13cm;
+            height: 18.2cm;
+            margin: 0 auto;
+            color: #001028;
+            background: #FFFFFF;
+            font-family: Helvetica, Sans-Serif;
+            font-size: 12px;
+         
+        }
+
+        header {
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        #logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+            #logo img {
+                width: 90px;
+            }
+
+        h1 {
+            border-top: 1px solid #5D6975;
+            border-bottom: 1px solid #5D6975;
+            color: #5D6975;
+            font-size: 2.4em;
+            line-height: 1.4em;
+            font-weight: normal;
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        #project {
+            float: left;
+        }
+
+            #project span {
+                color: #5D6975;
+                text-align: right;
+                width: 52px;
+                margin-right: 10px;
+                display: inline-block;
+                font-size: 0.8em;
+            }
+
+        #company {
+            float: right;
+            text-align: right;
+        }
+
+            #project div,
+            #company div {
+                white-space: nowrap;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 20px;
+        }
+
+            table tr:nth-child(2n-1) td {
+                background: #F5F5F5;
+            }
+
+            table th,
+            table td {
+                text-align: center;
+            }
+
+            table th {
+                padding: 5px 20px;
+                color: #5D6975;
+                border-bottom: 1px solid #C1CED9;
+                white-space: nowrap;
+                font-weight: normal;
+            }
+
+            table .service,
+            table .desc {
+                text-align: left;
+            }
+
+            table td {
+                padding: 20px;
+                text-align: right;
+            }
+
+                table td.service,
+                table td.desc {
+                    vertical-align: top;
+                }
+
+                table td.unit,
+                table td.qty,
+                table td.total {
+                    font-size: 1.2em;
+                }
+
+                table td.grand {
+                    border-top: 1px solid #5D6975;
+                }
+
+        #notices .notice {
+            color: #5D6975;
+            font-size: 1.2em;
+        }
+
+        footer {
+            color: #5D6975;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid #C1CED9;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header class="clearfix">
+       
+        <h1>LASKU</h1>
+        <div id="company" class="clearfix">
+            <div><b>LASKUTUS OSOITE</b></div>
+            <div>VuokraToimistot Oy</div>
+            <div>Karjalankatu 3<br /> 80200 JOENSUU</div>
+            <div>555 777777</div>
+            <div><a href="mailto:company@example.com">ro1@karelia.fi</a></div>
+            <div><b>FI49 5000 9420 0287 30</b></div>
+        </div>
+        <div id="project">
+            <div><span>Aihe</span>Tilavuokra</div>
+            <div><span>Asiakas</span>__CUST_NAME__</div>
+            <div><span>Osoite</span>__CUST_ADDR__</div>
+            <div><span>Sähköposti</span><a href="__CUST_EMAIL__">__CUST_EMAIL__</a></div>
+            <div><span>Päivämäärä</span>__DATE__</div>
+            <div><span>Eräpäivä</span>__DUE_DATE__</div>
+            <div><span>Viitenumero</span>__CUST_VIITENUMERO__</div>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="service">Toimipiste</th>
+                    <th class="desc">Palvelu</th>
+                    <th>Summa</th>
+                </tr>
+            </thead>
+            <tbody>
+                __TABLE__
+            </tbody>
+        </table>
+        <div id="notices">
+            <div>HUOMIOT:</div>
+            <div class="notice">Maksuehto 14 pv</div>
+        </div>
+    </main>
+    <footer>
+        Ryhma R01
+    </footer>
+</body>
+</html>

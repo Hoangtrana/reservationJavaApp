@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1076.0" style="-fx-border-color: GREEN;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistotapplication.VaraustenHallintaViewController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuClosedClicked" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <TableView fx:id="tbvVaraus" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="253.0" prefWidth="1076.0" style="-fx-border-color: CORNFLOWERBLUE;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colVarausID" prefWidth="198.0" text="Varaus ID" />
+          <TableColumn fx:id="colAloitusPaiva" minWidth="0.0" prefWidth="212.0" text="Aloitus Päivä" />
+            <TableColumn fx:id="colLopetusPaiva" minWidth="0.0" prefWidth="259.0" text="Lopetus Päivä" />
+            <TableColumn fx:id="colAsiakasID" prefWidth="196.0" text="Asiakas ID" />
+            <TableColumn fx:id="colToimipisteID" prefWidth="207.0" text="Toimipiste ID" />
+        </columns>
+      </TableView>
+   </bottom>
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="799.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="21.0" prefWidth="436.0" text="Toimistotilavarausten Hallinta">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="80.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="60.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="© Vuokratoimistot Oy 2020">
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txfVarausID" prefHeight="31.0" prefWidth="388.0" promptText="Varaus ID" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+               <children>
+                  <DatePicker fx:id="DatePickerAloitusPaiva" prefHeight="31.0" prefWidth="318.0" promptText="Aloitus päivä " />
+                  <DatePicker fx:id="DatePickerLopetusPaiva" prefHeight="31.0" prefWidth="318.0" promptText="Lopetus Päivä" />
+               </children>
+            </HBox>
+            <TextField fx:id="txfAsiakasID" promptText="Asiakas ID" />
+            <TextField fx:id="txfToimipisteID" promptText="Toimipiste ID" />
+            <Separator prefHeight="0.0" prefWidth="786.0">
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+            </Separator>
+            <TextField fx:id="txfHakuVarausID" onKeyReleased="#hakuVarausLista" promptText="Haku ID" style="-fx-border-color: DEEPSKYBLUE;">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="60.0" left="100.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+   </center>
+   <right>
+      <VBox maxWidth="-Infinity" prefHeight="203.0" prefWidth="123.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btLisaa" mnemonicParsing="false" onAction="#btLisaaClicked" prefHeight="31.0" prefWidth="118.0" text="Lisää">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btMuokka" mnemonicParsing="false" onAction="#btMuokkaClicked" prefHeight="31.0" prefWidth="120.0" text="Muokka">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btPoista" mnemonicParsing="false" onAction="#btPoistaClicked" prefHeight="31.0" prefWidth="102.0" text="Poista" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" right="15.0" top="100.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets right="30.0" />
+         </padding>
+      </VBox>
+   </right>
+   <left>
+      <Label prefHeight="21.0" prefWidth="87.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

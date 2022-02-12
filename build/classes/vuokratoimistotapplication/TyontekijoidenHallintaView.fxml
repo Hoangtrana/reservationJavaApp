@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistotapplication.TyontekijoidenHallintaViewController">
+   <top>
+      <MenuBar prefWidth="729.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tiedosto">
+            <items>
+              <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#menuCloseClicked" text="Sulje" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="471.0" prefWidth="364.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Työntekijoiden Hallinta">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfID" prefHeight="31.0" prefWidth="247.0" promptText="ID" />
+            <TextField fx:id="txfEtunimi" promptText="Etunimi" />
+            <TextField fx:id="txfSukunimi" promptText="Sukunimi" />
+            <HBox prefHeight="40.0" prefWidth="275.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btLisaa" mnemonicParsing="false" onAction="#btLisaaClicked" prefHeight="46.0" prefWidth="82.0" text="Lisää" />
+                  <Button fx:id="btMuokka" mnemonicParsing="false" onAction="#btMuokkaClicked" prefHeight="43.0" prefWidth="74.0" text="Muokka" />
+                  <Button fx:id="btPoista" mnemonicParsing="false" onAction="#btPoistaClicked" prefHeight="44.0" prefWidth="79.0" text="Poista" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tbvTyontekijat" prefHeight="472.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="126.0" text="ID" />
+          <TableColumn fx:id="colEtunimi" prefWidth="227.0" text="Etunimi" />
+            <TableColumn fx:id="colSukunimi" prefWidth="242.0" text="Sukunimi" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Label text="© Vuokratoimistot Oy 2020" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

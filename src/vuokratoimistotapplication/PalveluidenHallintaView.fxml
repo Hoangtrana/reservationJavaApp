@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistotapplication.PalveluidenHallintaViewController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#menuAddNewServiceClicked" text="Lisää uusi Palvelu" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuAddNewReservationClicked" text="Lisää uusi Varaus" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuCloseClicked" text="Sulje ikkuna" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuEditServiceClicked" text="Muokkaa palvelun tiedot" />
+              <MenuItem mnemonicParsing="false" onAction="#menuDeleteServiceClicked" text="Poista palvelun tiedot" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuEditReservationClicked" text="Muokkaa varauksen tiedot" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuDeleteReservationClicked" text="Poista varauksen tiedot" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="CENTER" prefHeight="52.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="VuokraToimistot Oy palvelut">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblViewPalvelu" prefHeight="197.0" prefWidth="1069.0">
+        <columns>
+          <TableColumn fx:id="palvelunIDColumn" prefWidth="132.0" text="Palvelun ID" />
+          <TableColumn fx:id="palvelunNimiColumn" prefWidth="326.0" text="Palvelu" />
+            <TableColumn fx:id="palvelunHintaColumn" minWidth="0.0" prefWidth="140.0" text="Hinta" />
+            <TableColumn fx:id="palvelunKuvausColumn" prefWidth="469.0" text="Kuvaus" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="42.0" prefHeight="31.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="Palveluiden hallinta">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPalvelunID" promptText="Palvelun ID" style="-fx-border-color: LIGHTBLUE;" />
+      <TextField fx:id="txtPalvelunNimi" layoutX="10.0" layoutY="523.0" promptText="Palvelu" style="-fx-border-color: LIGHTBLUE;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="txtPalvelunHinta" layoutX="10.0" layoutY="554.0" promptText="Hinta" style="-fx-border-color: LIGHTBLUE;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="txtPalvelunKuvaus" layoutX="10.0" layoutY="585.0" promptText="Kuvaus" style="-fx-border-color: LIGHTBLUE;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="322.0" prefHeight="31.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="Varatut toimipisteet">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblViewVaratutToimipisteet" prefHeight="168.0" prefWidth="1069.0">
+        <columns>
+          <TableColumn fx:id="VaratutToimipisteetVarausIDColumn" prefWidth="161.0" text="Varaus ID" />
+            <TableColumn fx:id="VaratutToimipisteetAloitusPaivaColumn" prefWidth="260.0" text="Aloitus Päivä" />
+            <TableColumn fx:id="VaratutToimipisteetLopetusPaivaColumn" prefWidth="260.0" text="Lopetus Päivä" />
+            <TableColumn fx:id="VaratutToimipisteetAsiakasIDColumn" prefWidth="201.0" text="Asiakas ID" />
+            <TableColumn fx:id="VaratutToimipisteetToimipisteIDColumn" prefWidth="185.0" text="Toimipiste ID" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="505.0" prefHeight="31.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="Uuden palvelun varaaminen">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtToimipisteIDVaraus" layoutX="10.0" layoutY="322.0" promptText="Toimipiste ID" style="-fx-border-color: LIGHTBLUE;" />
+      <TextField fx:id="txtPalvelunIDVaraus" layoutX="10.0" layoutY="360.0" promptText="Palvelu ID" style="-fx-border-color: LIGHTBLUE;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="txtVarausIDVaraus" layoutX="10.0" layoutY="770.0" promptText="Varaus ID" style="-fx-border-color: LIGHTBLUE;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="txtAsiakasIDVaraus" layoutX="10.0" layoutY="675.0" promptText="Asiakas ID" style="-fx-border-color: LIGHTBLUE;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="600.0" prefHeight="31.0" prefWidth="1069.0" style="-fx-border-color: LIGHTBLUE;" text="Varatut palvelut">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblViewVaratutPalvelut" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="VaratutPalvelutToimipisteIDColumn" prefWidth="250.0" text="Toimipiste ID" />
+            <TableColumn fx:id="VaratutPalvelutPalveluIDColumn" prefWidth="276.0" text="Palvelu ID" />
+            <TableColumn fx:id="VaratutPalvelutVarausIDColumn" prefWidth="276.0" text="Varaus ID" />
+            <TableColumn fx:id="VaratutPalvelutAsiakasIDColumn" prefWidth="266.0" text="Asiakas ID" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="889.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistotapplication.LisapalvelutLaitteetRaportointiViewController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemSaveClicked" text="Raportti tiedoilla" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuItemPreviewClicked" text="Raporttipohja" />
+              <MenuItem mnemonicParsing="false" onAction="#menuCloseClicked" text="Sulje ikkuna" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="CENTER" prefHeight="47.0" prefWidth="1300.0" style="-fx-border-color: LIGHTBLUE;" text="VuokraToimistot Oy">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="42.0" prefHeight="36.0" prefWidth="1300.0" style="-fx-border-color: LIGHTBLUE;" text="Vuokrattujen palveluiden raportointi valituissa toimipisteessä">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="39.0" prefWidth="956.0" style="-fx-border-color: LIGHTBLUE;">
+         <children>
+            <Label alignment="CENTER" prefHeight="37.0" prefWidth="205.0" style="-fx-border-color: LIGHTBLUE;" text="Aikaväli:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="182.0" text="Aloituspäivä: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="txtAloitusPaivaDate" prefHeight="37.0" prefWidth="351.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="10.0" prefHeight="37.0" prefWidth="169.0" text="Lopetuspäivä: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="txtLopetusPaivaDate" layoutX="353.0" layoutY="10.0" prefHeight="37.0" prefWidth="392.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="125.0" prefHeight="39.0" prefWidth="956.0" style="-fx-border-color: LIGHTBLUE;">
+         <children>
+            <Label alignment="CENTER" prefHeight="37.0" prefWidth="205.0" style="-fx-border-color: LIGHTBLUE;" text="Toimipiste">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboValitseToimipiste" prefHeight="37.0" prefWidth="703.0" promptText="Valitse toimipiste" style="-fx-border-color: LIGHTBLUE;" />
+            <Button mnemonicParsing="false" onAction="#btnEtsiButtonPressed" prefHeight="37.0" prefWidth="389.0" style="-fx-border-color: LIGHTBLUE;" text="Etsi" />
+         </children>
+      </HBox>
+      <HBox prefHeight="279.0" prefWidth="1300.0">
+         <children>
+            <TableView fx:id="tblViewPalvelu" prefHeight="100.0" prefWidth="817.0">
+              <columns>
+                <TableColumn fx:id="palvelunIDColumn" prefWidth="109.0" text="Palvelun ID" />
+                  <TableColumn fx:id="palvelunNimiColumn" prefWidth="166.0" text="Nimi" />
+                  <TableColumn fx:id="palvelunHintaColumn" prefWidth="116.0" text="Hinta" />
+                  <TableColumn fx:id="palvelunKuvausColumn" prefWidth="258.0" text="Kuvaus" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblViewVaraus" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="817.0">
+               <columns>
+                  <TableColumn fx:id="VaratutToimipisteetVarausIDColumn" prefWidth="109.0" text="Varaus ID" />
+                  <TableColumn fx:id="VaratutToimipisteetAloitusPaivaColumn" prefWidth="166.0" text="Aloitus päivä" />
+                  <TableColumn fx:id="VaratutToimipisteetLopetusPaivaColumn" prefWidth="169.0" text="Lopetus päivä" />
+                  <TableColumn fx:id="VaratutToimipisteetAsiakasIDColumn" prefWidth="95.0" text="Asiakas ID" />
+                  <TableColumn fx:id="VaratutToimipisteetToimipisteIDColumn" prefWidth="110.0" text="Toimipiste ID" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <WebView fx:id="webView" prefHeight="396.0" prefWidth="1300.0" />
+      <Label alignment="CENTER" layoutX="10.0" layoutY="89.0" prefHeight="35.0" prefWidth="1300.0" text="© VuokraToimistot Oy 2021">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
