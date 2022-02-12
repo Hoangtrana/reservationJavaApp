@@ -7,7 +7,7 @@
 
 ## Programming language: Java, HTML
 
-![Main screen] (mainscreen.png)
+![Main screen](mainscreen.PNG)
 
-![Report Screen] (report.png)
+![Report Screen](report.PNG)
 
